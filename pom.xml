@@ -23,6 +23,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <axon.version>3.2.1</axon.version>
+        <axondb.version>1.2.3</axondb.version>
+        <axonhub.version>1.0.3</axonhub.version>
     </properties>
 
     <dependencies>
@@ -47,6 +49,16 @@
             <groupId>org.axonframework</groupId>
             <artifactId>axon-mongo</artifactId>
             <version>${axon.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.axoniq</groupId>
+            <artifactId>axondb-client</artifactId>
+            <version>${axondb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.axoniq</groupId>
+            <artifactId>axonhub-spring-boot-autoconfigure</artifactId>
+            <version>${axonhub.version}</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>

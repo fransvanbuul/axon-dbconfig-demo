@@ -34,7 +34,7 @@ public class AxonDbconfigDemoApplication {
         log.debug("Sending command {}", command);
         commandGateway.sendAndWait(command);
         /* Give some time to async process and write logging before we shutdown. */
-        Thread.sleep(500);
+        Thread.sleep(3000);
         System.out.println();
         log.debug("****** APPLICATION LOGIC COMPLETED, SHUTTING DOWN ******");
     }

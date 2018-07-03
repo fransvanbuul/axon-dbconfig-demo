@@ -1,5 +1,7 @@
 package com.example.axondbconfigdemo.config;
 
+import io.axoniq.axonhub.client.boot.EventStoreAutoConfiguration;
+import io.axoniq.axonhub.client.boot.MessagingAutoConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
@@ -14,6 +16,6 @@ import org.springframework.context.annotation.Profile;
  */
 @Configuration
 @Profile("h2-jpa")
-@EnableAutoConfiguration(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class, EventStoreAutoConfiguration.class, MessagingAutoConfiguration.class})
 public class H2JpaConfig {
 }

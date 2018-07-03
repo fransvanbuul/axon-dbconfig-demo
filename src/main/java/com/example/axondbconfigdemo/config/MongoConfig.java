@@ -1,6 +1,8 @@
 package com.example.axondbconfigdemo.config;
 
 import com.mongodb.MongoClient;
+import io.axoniq.axonhub.client.boot.EventStoreAutoConfiguration;
+import io.axoniq.axonhub.client.boot.MessagingAutoConfiguration;
 import org.axonframework.eventhandling.saga.repository.SagaStore;
 import org.axonframework.eventhandling.tokenstore.TokenStore;
 import org.axonframework.eventsourcing.eventstore.EventStorageEngine;
@@ -31,7 +33,7 @@ import org.springframework.context.annotation.Profile;
  */
 @Configuration
 @Profile("mongo")
-@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class, JpaRepositoriesAutoConfiguration.class})
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class, JpaRepositoriesAutoConfiguration.class, EventStoreAutoConfiguration.class, MessagingAutoConfiguration.class})
 public class MongoConfig {
 
     /* Storing events in Mongo. */

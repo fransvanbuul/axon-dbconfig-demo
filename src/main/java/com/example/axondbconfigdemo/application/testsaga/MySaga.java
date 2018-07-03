@@ -9,7 +9,7 @@ import org.axonframework.spring.stereotype.Saga;
 /**
  * Dummy saga, just included to make sure we test various implementations of the SagaStore.
  */
-@Saga
+//@Saga
 @Slf4j
 public class MySaga {
 

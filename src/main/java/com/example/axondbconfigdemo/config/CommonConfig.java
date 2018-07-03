@@ -20,18 +20,18 @@ public class CommonConfig {
     /**
      * Use tracking event processors for event handlers.
      */
-    @Autowired
-    public void config(EventHandlingConfiguration configuration) {
-        configuration.usingTrackingProcessors();
-    }
+//    @Autowired
+//    public void config(EventHandlingConfiguration configuration) {
+//        configuration.usingTrackingProcessors();
+//    }
 
     /**
      * Use a tracking processor for our saga
      */
-    @Bean
-    public SagaConfiguration<MySaga> mySagaSagaConfiguration() {
-        return SagaConfiguration.trackingSagaManager(MySaga.class);
-    }
+//    @Bean
+//    public SagaConfiguration<MySaga> mySagaSagaConfiguration() {
+//        return SagaConfiguration.trackingSagaManager(MySaga.class);
+//    }
 
     /**
      * Enable XStream security and tell XStream which types are allowed; otherwise XStream will provide a
